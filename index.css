@@ -66,13 +66,26 @@ canvas {
 
 @media(max-width: 768px) {
     .logo__container img {
-
         width: 70vw;
         height: auto;
     }
     .logo__container.logo__container--reasonable img {
         width: 90vw;
         height: auto;
+    }
+
+    .helper--mobilehidden {
+        display: none;
+    }
+    .logo__container.logo__container--reasonable .logo__row {
+        height: 3.6em;
+    }
+    .logo__container.logo__container--reasonable .logo__info {
+        margin-top: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -91,6 +104,8 @@ canvas {
     margin: 0;
     opacity: 0.9;
     font-size: 1.2em;
+
+    text-align: center;
 }
 
 .link__interest {
