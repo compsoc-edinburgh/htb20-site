@@ -4,3 +4,5 @@ facebook_pixel_id: 1849815381724340
 
 sass:
     sass_dir: _sass
+
+exclude: ['_site', 'scripts']

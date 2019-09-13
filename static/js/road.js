@@ -9,7 +9,7 @@ function createLandscape(params){
     var height = window.innerHeight;
 
     var scene, renderer, camera;
-    var terrain;
+    var terrain, skybox;
 
     var mouse = { x:0, y:0, xDamped:0, yDamped:0 };
     var isMobile = typeof window.orientation !== 'undefined'
@@ -70,7 +70,8 @@ function createLandscape(params){
             pallete:{ type: "t", value: null},
             speed: { type: "f", value: 1 },
             maxHeight: { type: "f", value: 10.0 },
-            color:new THREE.Color(1, 1, 1)
+            color:new THREE.Color(1, 1, 1),
+            scrollPercent: { type: "f", value: 0.0 }
         }
 
         var material = new THREE.ShaderMaterial({
@@ -97,32 +98,32 @@ function createLandscape(params){
         });
     }
 
-    function sky(){
-        sky = new THREE.Sky();
-        sky.scale.setScalar( 450000 );
-        sky.material.uniforms.turbidity.value = 1;
-        sky.material.uniforms.rayleigh.value = 0.01;
-        sky.material.uniforms.luminance.value = 1;
-        sky.material.uniforms.mieCoefficient.value = 0.0003;
-        sky.material.uniforms.mieDirectionalG.value = 0.99995;
+    function calculateSunPosition(scrollPos) {
+        let lerpedThetaMod = map(scrollPos, 0, 1, -0.03, -0.25);
 
-        scene.add( sky );
-
-        sunSphere = new THREE.Mesh(
-            new THREE.SphereBufferGeometry( 20000, 16, 8 ),
-            new THREE.MeshBasicMaterial( { color: 0xffffff } )
-        );
-        sunSphere.visible = false;
-        scene.add( sunSphere );
-
-        var theta = Math.PI * ( -0.03 );
+        var theta = Math.PI * ( lerpedThetaMod ); // -0.03 -> -0.25
         var phi = 2 * Math.PI * ( -.25 );
 
-        sunSphere.position.x = 400000 * Math.cos( phi );
-        sunSphere.position.y = 400000 * Math.sin( phi ) * Math.sin( theta );
-        sunSphere.position.z = 400000 * Math.sin( phi ) * Math.cos( theta );
+        let vec = new THREE.Vector3(0,0,0);
 
-        sky.material.uniforms.sunPosition.value.copy( sunSphere.position );
+        vec.x = 400000 * Math.cos( phi );
+        vec.y = 400000 * Math.sin( phi ) * Math.sin( theta );
+        vec.z = 400000 * Math.sin( phi ) * Math.cos( theta );
+
+        this.skybox.material.uniforms.sunPosition.value.copy( vec );
+    }
+
+    function sky(){
+        this.skybox = new THREE.Sky();
+        this.skybox.scale.setScalar( 450000 );
+        this.skybox.material.uniforms.turbidity.value = 1;
+        this.skybox.material.uniforms.rayleigh.value = 0.01;
+        this.skybox.material.uniforms.luminance.value = 1;
+        this.skybox.material.uniforms.mieCoefficient.value = 0.0003;
+        this.skybox.material.uniforms.mieDirectionalG.value = 0.99995;
+
+        scene.add( this.skybox );
+        calculateSunPosition(0)
     }
 
     function resize(){
@@ -163,6 +164,20 @@ function createLandscape(params){
         terrain.material.uniforms.distortCenter.value = Math.sin(time) * 0.1;
         terrain.material.uniforms.maxHeight.value = map(mouse.yDamped, 0, height, 20, 5);
 
+        // transformation of skybox
+        let scrollPercent = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+        terrain.material.uniforms.scrollPercent.value = scrollPercent
+
+        let lerpedRayleigh = map(scrollPercent, 0, 1, 0.01, 1);
+        let lerpedMieDirectionalG = map(scrollPercent, 0, 1, 0.9995, 0.8);
+        let lerpedLuminance = map(scrollPercent, 0, 1, 1, 0.1);
+        this.skybox.material.uniforms.rayleigh.value = lerpedRayleigh;
+        this.skybox.material.uniforms.mieDirectionalG.value = lerpedMieDirectionalG;
+        this.skybox.material.uniforms.luminance.value = lerpedLuminance;
+
+        scene.fog.near = map(scrollPercent, 0, 1, 10, 399 );
+
+        calculateSunPosition( scrollPercent );
 
         renderer.render(scene, camera)
 
