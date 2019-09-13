@@ -23,8 +23,9 @@ function createLandscape(params){
         sceneTextures();
         render();
 
+            //window.addEventListener("touchmove", onInputMove, {passive:false})
         if(isMobile)
-            window.addEventListener("touchmove", onInputMove, {passive:false})
+            window.addEventListener("deviceorientation", onOrientationChange, true)
         else
             window.addEventListener("mousemove", onInputMove)
 
@@ -150,6 +151,12 @@ function createLandscape(params){
         mouse.x = x;
         mouse.y = y;
 
+    }
+    function onOrientationChange(e) {
+        // map the beta axis (X) of the accel event to some "height" along the
+        // window to retrofit accel controls for the bump height
+        mouse.x = 0;
+        mouse.y = window.innerHeight * (0.5 + ((-1 * Math.cos(e.beta)) / 2))
     }
 
     function render(){
