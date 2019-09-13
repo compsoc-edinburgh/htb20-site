@@ -48,13 +48,15 @@ canvas {
     pointer-events: none;
     will-change: opacity;
 
+    height: 0.01px;
     /* transition: 1s opacity cubic-bezier(0,0,0.3,1); */
-    transition: 1s opacity ease-in-out;
+    transition: 1s opacity ease-in-out, 1s height ease-in-out;
 }
 
 .logo__container.logo__container--reasonable .logo__row {
     opacity: 1;
     pointer-events: initial;
+    height: 1.8em;
 }
 
 .logo__container.logo__container--reasonable img {
@@ -81,6 +83,14 @@ canvas {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+
+.logo__info {
+    color: white;
+    margin: 0;
+    opacity: 0.9;
+    font-size: 1.2em;
 }
 
 .link__interest {
