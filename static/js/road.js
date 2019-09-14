@@ -26,9 +26,9 @@ function createLandscape(params){
         render();
 
             //window.addEventListener("touchmove", onInputMove, {passive:false})
-            // window.addEventListener("deviceorientation", onOrientationChange, true)
+            //gyro.init().then( () => gn.start( onOrientationChange ) )
         if(isMobile)
-            gyro.init().then( () => gn.start( onOrientationChange ) )
+            window.addEventListener("deviceorientation", onOrientationChange, true)
         else
             window.addEventListener("mousemove", onInputMove)
 
@@ -157,7 +157,7 @@ function createLandscape(params){
     function onOrientationChange(e) {
         // map the beta axis (X) of the accel event to some "height" along the
         // window to retrofit accel controls for the bump height
-        let betaRadian = (e.do.beta * Math.PI) / 180;
+        let betaRadian = (e.beta * Math.PI) / 180;
         mouse.x = 0;
         mouse.y = window.innerHeight * (0.5 + ((-1 * Math.cos(betaRadian * 2)) / 2))
     }
