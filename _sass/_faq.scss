@@ -1,0 +1,58 @@
+@import 'util/media';
+
+$faq__cards-per-row: 3;
+
+.faq {
+    @include media-desktop {
+        margin-top: 40vh;
+    }
+
+    margin-top: 20vh;
+
+    color: white;
+}
+
+.faq__header {
+    font-family: 'BNT', sans-serif;
+    font-size: 4em;
+    margin: 1em 0 1em 0;
+    text-align: center;
+
+    @include media-mobile {
+        padding: 0 5px 0 5px;
+    }
+}
+
+
+.faq__layout {
+    padding: 0 2px 0 2px;
+	@include media-desktop {
+		padding: 0 10% 0 10%;
+        grid-template-columns: auto auto auto;
+	}
+
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.faq__card {
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+	justify-content: flex-start;
+
+    background-color: rgba(180,180,180,0.75);
+
+	> .faq__cardtitle {
+		font-size: 1.5em;
+		margin-bottom: 1rem;
+	}
+	> .faq__cardicon {
+		font-size: 5em;
+	}
+
+    padding: 10px;
+}
