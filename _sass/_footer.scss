@@ -1,0 +1,35 @@
+@import "util/media";
+
+.footer a {
+    color: white; // override
+}
+
+.footer {
+	padding: 20px 40px 20px 40px;
+
+	font-size: 0.8em;
+	color: white;
+	background-color: #272A2B;
+	
+	display: flex;
+	flex-direction: column;
+	@include media-desktop {
+		flex-direction: row;
+	}
+
+	align-items: center;
+	justify-content: space-between;
+}
+
+.footer-left {
+	> a > .heart {
+		color: white;
+		transition: color 0.2s cubic-bezier(0,0,0.3,1);
+	}
+
+	&:hover {
+		> a > .heart {
+			color: #d50012 !important;
+		}
+	}
+}
