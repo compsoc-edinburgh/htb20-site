@@ -1,0 +1,22 @@
+#hc-enable {
+    position: absolute;
+    left: 10px;
+    top: 3px;
+    font-size: 2em;
+    z-index: 10;
+
+    opacity: 0;
+    transition: 1s opacity cubic-bezier(0,0,0.3,1);
+}
+
+#hc-enable.hc__active {
+    opacity: 1;
+}
+
+body.app__high-contrast > canvas#c {
+    opacity: 0;
+}
+
+body.app__high-contrast .faq__card {
+    background-color: rgba(0,0,0,0) !important;
+}
