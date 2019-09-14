@@ -155,8 +155,9 @@ function createLandscape(params){
     function onOrientationChange(e) {
         // map the beta axis (X) of the accel event to some "height" along the
         // window to retrofit accel controls for the bump height
+        let betaRadian = (e.beta * Math.PI) / 180;
         mouse.x = 0;
-        mouse.y = window.innerHeight * (0.5 + ((-1 * Math.cos(e.beta)) / 2))
+        mouse.y = window.innerHeight * (0.5 + ((-1 * Math.cos(e.beta * Math.PI)) / 2))
     }
 
     function render(){
