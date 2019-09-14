@@ -88,7 +88,6 @@ function createLandscape(params){
         terrain.rotation.x = -Math.PI / 2
 
         scene.add(terrain)
-
     }
 
     function sceneTextures(){
@@ -157,7 +156,7 @@ function createLandscape(params){
         // window to retrofit accel controls for the bump height
         let betaRadian = (e.beta * Math.PI) / 180;
         mouse.x = 0;
-        mouse.y = window.innerHeight * (0.5 + ((-1 * Math.cos(e.beta * Math.PI)) / 2))
+        mouse.y = window.innerHeight * (0.5 + ((-1 * Math.cos(betaRadian * Math.PI)) / 2))
     }
 
     function render(){
