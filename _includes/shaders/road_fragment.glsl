@@ -15,6 +15,7 @@ void main() {
     vec2 stripPos = vec2( 0.0, vDisplace );
     vec4 stripColor = texture2D( pallete, stripPos );
     
+    
     // scale the top strip colors by the current displacement
     stripColor *= pow(1.0-((1.0 - pow(scrollPercent, 0.5)) * vDisplace), 1.0);
 

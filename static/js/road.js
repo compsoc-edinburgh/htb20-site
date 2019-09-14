@@ -10,6 +10,7 @@ function createLandscape(params){
 
     var scene, renderer, camera;
     var terrain, skybox;
+    var gyro;
 
     var mouse = { x:0, y:0, xDamped:0, yDamped:0 };
     var isMobile = typeof window.orientation !== 'undefined'
@@ -17,6 +18,7 @@ function createLandscape(params){
     init();
 
     function init(){
+        gyro = new GyroNorm(); // gyroscope polyfill
 
         sceneSetup();
         sceneElements();
@@ -24,8 +26,9 @@ function createLandscape(params){
         render();
 
             //window.addEventListener("touchmove", onInputMove, {passive:false})
+            // window.addEventListener("deviceorientation", onOrientationChange, true)
         if(isMobile)
-            window.addEventListener("deviceorientation", onOrientationChange, true)
+            gyro.init().then( () => gn.start( onOrientationChange ) )
         else
             window.addEventListener("mousemove", onInputMove)
 
@@ -154,9 +157,9 @@ function createLandscape(params){
     function onOrientationChange(e) {
         // map the beta axis (X) of the accel event to some "height" along the
         // window to retrofit accel controls for the bump height
-        let betaRadian = (e.beta * Math.PI) / 180;
+        let betaRadian = (e.do.beta * Math.PI) / 180;
         mouse.x = 0;
-        mouse.y = window.innerHeight * (0.5 + ((-1 * Math.cos(betaRadian * Math.PI)) / 2))
+        mouse.y = window.innerHeight * (0.5 + ((-1 * Math.cos(betaRadian * 2)) / 2))
     }
 
     function render(){
@@ -173,6 +176,11 @@ function createLandscape(params){
 
         // transformation of skybox
         let scrollPercent = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+        if (scrollPercent < 0) {
+            scrollPercent = 0
+        } else if (scrollPercent > 1) {
+            scrollPercent = 1
+        }
         terrain.material.uniforms.scrollPercent.value = scrollPercent
 
         let lerpedRayleigh = map(scrollPercent, 0, 1, 0.01, 1);
