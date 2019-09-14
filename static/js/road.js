@@ -159,7 +159,7 @@ function createLandscape(params){
         // window to retrofit accel controls for the bump height
         let betaRadian = (e.beta * Math.PI) / 180;
         mouse.x = 0;
-        mouse.y = window.innerHeight * (0.5 + ((-1 * Math.cos(betaRadian * 2)) / 2))
+        mouse.y = 1 - (window.innerHeight * (0.5 + ((-1 * Math.cos(betaRadian * 2)) / 2)))
     }
 
     function render(){
