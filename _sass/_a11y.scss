@@ -17,6 +17,10 @@ body.app__high-contrast > canvas#c {
     opacity: 0;
 }
 
-body.app__high-contrast .faq__card {
+body.app__high-contrast *:not(a) {
+    color: white;
+}
+
+body.app__high-contrast *:not(.sponsors__layout) {
     background-color: rgba(0,0,0,0) !important;
 }
