@@ -5,4 +5,4 @@ document.querySelector('#hc-enable').addEventListener('click', e => {
 
 setTimeout( () => {
     document.querySelector('#hc-enable').classList.add('hc__active')
-}, 1500)
+}, 500)
