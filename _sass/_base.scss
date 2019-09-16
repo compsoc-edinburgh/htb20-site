@@ -6,28 +6,35 @@ body {
 
 $htb__accent: #56CBF9;
 
+@mixin content-card {
+    background-color: rgba(255,255,255,0.75);
+    padding: 10px;
+}
+
 @mixin content-page {
     @include media-desktop {
-        margin-top: 40vh;
+        margin-top: 20vh;
     }
 
     margin-top: 20vh;
 
-    color: white;
+    color: #2b2b2b;
 }
 
 @mixin content-page__header {
     font-family: 'BNT', sans-serif;
     font-size: 4em;
-    margin: 1em 0 1em 0;
+    margin: 10px 2px 10px 2px;
     text-align: center;
 
     @include media-mobile {
         padding: 0 5px 0 5px;
     }
+
+    @include media-desktop {
+        margin: 10px 10% 10px 10%;
+    }
+
+    @include content-card;
 }
 
-@mixin content-card {
-    background-color: rgba(180,180,180,0.75);
-    padding: 10px;
-}

@@ -1,0 +1,64 @@
+
+@import 'util/media';
+
+.sponsors {
+    @include content-page;
+}
+
+.sponsors__header {
+    @include content-page__header;
+}
+
+.sponsors__layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include content-card;
+
+    padding: 10px;
+    margin: 2px;
+
+    @include media-desktop {
+        margin: 10px 10% 10px 10%;
+    }
+
+    > hr {
+        width: 40%;
+        margin: 1rem 30% 1rem 30%;
+    }
+}
+
+.sponsors__logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+}
+
+.sponsors__logos--gold img {
+    width: 70vw;
+    height: auto;
+    @include media-mobile {
+        width: 100%;
+    }
+}
+
+.sponsors__logos--silver img {
+    width: 50vw;
+    height: auto;
+    @include media-mobile {
+        width: 60vw;
+    }
+}
+
+.sponsors__logos--bronze img {
+    width: 30vw;
+    height: auto;
+
+    @include media-mobile {
+        width: 40vw;
+    }
+}
