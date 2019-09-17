@@ -17,10 +17,10 @@
     @include content-card;
 
     padding: 10px;
-    margin: 2px;
+    margin: 0 2px 0 2px;
 
     @include media-desktop {
-        margin: 10px 10% 10px 10%;
+        margin: 0 10% 0 10%;
     }
 
     > hr {

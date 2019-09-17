@@ -1,38 +1,37 @@
 body {
     font-family: "Open Sans", sans-serif;
-    margin: 0;
     background-color: black;
+
+    margin: 0;
 }
 
 $htb__accent: #56CBF9;
+$content__background: rgba(255,255,255,0.75);
+
+section {
+    background-color: $content__background;
+}
 
 @mixin content-card {
-    background-color: rgba(255,255,255,0.75);
     padding: 10px;
 }
 
 @mixin content-page {
-    @include media-desktop {
-        margin-top: 20vh;
-    }
-
-    margin-top: 20vh;
-
     color: #2b2b2b;
 }
 
 @mixin content-page__header {
     font-family: 'BNT', sans-serif;
     font-size: 4em;
-    margin: 10px 2px 10px 2px;
+    margin: 0 2px 0px 2px;
     text-align: center;
 
     @include media-mobile {
-        padding: 0 5px 0 5px;
+        //padding: 0 5px 0 5px;
     }
 
     @include media-desktop {
-        margin: 10px 10% 10px 10%;
+        margin: 0 10% 0 10%;
     }
 
     @include content-card;
