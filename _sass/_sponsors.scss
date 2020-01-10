@@ -12,7 +12,7 @@
 .sponsors__layout {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
 
     @include content-card;
 
@@ -26,30 +26,45 @@
     > hr {
         width: 40%;
         margin: 2rem 30% 2rem 30%;
+        @include media-mobile {
+            margin: 1rem 30% 1rem 30%;
+        }
 
         border: 0;
     }
 }
 
-.sponsors__logos {
+.sponsor__logos {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+
+    @include media-mobile {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
 
     flex-wrap: wrap;
+
+    > a {
+        display: block;
+        @include media-mobile {
+            margin-bottom: 5px;
+        }
+    }
 }
 
 .sponsors__logos--gold img {
-    width: 70vw;
+    width: 35vw;
     height: auto;
     @include media-mobile {
-        width: 100%;
+        width: 70vw;
     }
 }
 
 .sponsors__logos--silver img {
-    width: 50vw;
+    width: 30vw;
     height: auto;
     @include media-mobile {
         width: 60vw;
@@ -57,7 +72,7 @@
 }
 
 .sponsors__logos--bronze img {
-    width: 30vw;
+    width: 20vw;
     height: auto;
 
     @include media-mobile {

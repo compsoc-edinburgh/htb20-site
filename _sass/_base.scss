@@ -5,8 +5,8 @@ body {
     margin: 0;
 }
 
-$htb__accent: #56CBF9;
-$content__background: rgba(255,255,255,0.75);
+$htb__accent: #CB0202;
+$content__background: rgba(43, 43, 43, 0.95);
 
 section {
     background-color: $content__background;
@@ -17,7 +17,7 @@ section {
 }
 
 @mixin content-page {
-    color: #2b2b2b;
+    color: #EFEFEF;
 }
 
 @mixin content-page__header {

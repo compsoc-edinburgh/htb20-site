@@ -110,8 +110,8 @@ function createLandscape(params){
         let vec = new THREE.Vector3(0,0,0);
 
         vec.x = 400000 * Math.cos( phi );
-        vec.y = 400000 * Math.sin( phi ) * Math.sin( theta );
-        vec.z = 400000 * Math.sin( phi ) * Math.cos( theta );
+        vec.y = -400000 * Math.sin( phi ) * Math.sin( theta );
+        vec.z = -400000 * Math.sin( phi ) * Math.cos( theta );
 
         this.skybox.material.uniforms.sunPosition.value.copy( vec );
     }
@@ -183,6 +183,7 @@ function createLandscape(params){
         }
         terrain.material.uniforms.scrollPercent.value = scrollPercent
 
+            /*
         let lerpedRayleigh = map(scrollPercent, 0, 1, 0.01, 1);
         let lerpedMieDirectionalG = map(scrollPercent, 0, 1, 0.9995, 0.8);
         let lerpedLuminance = map(scrollPercent, 0, 1, 1, 0.1);
@@ -193,6 +194,7 @@ function createLandscape(params){
         scene.fog.near = map(scrollPercent, 0, 1, 10, 399 );
 
         calculateSunPosition( scrollPercent );
+        */
 
         renderer.render(scene, camera)
 
