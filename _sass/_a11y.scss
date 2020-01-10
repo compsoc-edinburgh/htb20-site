@@ -17,12 +17,19 @@ body.app__high-contrast > canvas#c {
     opacity: 0;
 }
 
-body.app__high-contrast *:not(a) {
+body.app__high-contrast *:not(a):not(.sponsors__header) {
     color: white;
 }
 
-body.app__high-contrast *:not(.sponsors__layout) {
+body.app__high-contrast *:not(.sponsors) {
     background-color: rgba(0,0,0,0) !important;
     fill: rgba(0,0,0,0) !important;
 }
 
+body.app__high-contrast .sponsors {
+    color: black !important;
+    background-color: white;
+}
+body.app__high-contrast .sponsors__header svg {
+    background-color: white;
+}
