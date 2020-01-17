@@ -1,12 +1,16 @@
+@import 'util/anim';
+
 #hc-enable {
     position: absolute;
     left: 10px;
-    top: 3px;
+    top: 2rem;
     font-size: 2em;
     z-index: 10;
 
     opacity: 0;
     transition: 1s opacity cubic-bezier(0,0,0.3,1);
+    
+    @include ribbon-slide-down;
 }
 
 #hc-enable.hc__active {
