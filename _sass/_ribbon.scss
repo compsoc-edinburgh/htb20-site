@@ -1,0 +1,22 @@
+@import 'util/anim';
+.ribbon {
+    position: absolute;
+    display: block;
+    background-color: $htb__accent;
+    padding: 5px 1em 5px 1em;
+
+    left: 0;
+    right: 0; 
+
+    z-index: 10;
+    color: white;
+    
+    @include ribbon-slide-down;
+
+    & > i.fas {
+        transition: transform 0.25s cubic-bezier(0,0,0.3,1);
+    }
+    &:hover > i.fas {
+        transform: translateX(5px);
+    }
+}

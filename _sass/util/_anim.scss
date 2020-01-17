@@ -1,0 +1,15 @@
+@keyframes ribbon-slide-down-frames {
+    from {
+        transform: translateY(-2.1rem);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+@mixin ribbon-slide-down {
+    animation: ribbon-slide-down-frames ease-in;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    transform: translateY(-2.1rem);
+}
