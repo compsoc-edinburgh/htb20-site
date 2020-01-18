@@ -23,14 +23,22 @@
         margin: 0 10% 0 10%;
     }
 
-    > hr {
-        width: 40%;
-        margin: 2rem 30% 2rem 30%;
-        @include media-mobile {
-            margin: 1rem 30% 1rem 30%;
-        }
+    > h3 {
+        font-size: 1.5em;
+        margin: 1em 35% 1em 35%;
+        text-align: center;
 
-        border: 0;
+        color: rgba(224,224,224,0.7);
+
+        padding: 0px 0 0.5em 0;
+        width: 30%;
+        border-bottom: 1px solid rgba(224,224,224,0.7);
+
+
+        @include media-mobile {
+            width: 70%;
+            margin: 1em 15% 1em 15%;
+        }
     }
 }
 
@@ -67,7 +75,7 @@
     width: 30vw;
     height: auto;
     @include media-mobile {
-        width: 60vw;
+        width: 70vw;
     }
 }
 
@@ -76,15 +84,15 @@
     height: auto;
 
     @include media-mobile {
-        width: 40vw;
+        width: 50vw;
     }
 }
 
 .sponsors__logos--affiliate img {
-    width: 10vw;
+    width: 15vw;
     height: auto;
 
     @include media-mobile {
-        width: 15vw;
+        width: 45vw;
     }
 }
