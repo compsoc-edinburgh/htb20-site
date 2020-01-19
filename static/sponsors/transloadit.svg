@@ -3,8 +3,9 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 300 120" style="enable-background:new 0 0 300 120;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:none;}
 	.st1{fill:#FFFFFF;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
 </style>
 <title>logos-transloadit-default</title>
 <desc>Created with Sketch.</desc>
@@ -56,7 +57,7 @@
 			C144.2,19.5,144.6,19,144.6,18.1z M148.1,1.3v16.8c0,3.3-1.5,4.8-4.7,4.8h-5.9c-3.3,0-4.7-1.5-4.7-4.8v-7.2c0-3.3,1.4-4.8,4.7-4.8
 			h7.1V1.3L148.1,1.3L148.1,1.3z"/>
 		<polygon id="Path" class="st1" points="155.2,6.3 155.2,22.9 151.7,22.9 151.7,6.3 		"/>
-		<circle id="Oval" class="st0" cx="153.3" cy="2.3" r="2.3"/>
+		<circle id="Oval" class="st2" cx="153.3" cy="2.3" r="2.3"/>
 		<path id="Shape_9_" class="st1" d="M168.3,19.5v3.3h-5.3c-3,0-4.1-1.2-4.1-4.2V1.3h3.6v4.8h5.3v3.3h-5.3v9.2
 			c0,0.6,0.1,0.8,0.6,0.8L168.3,19.5"/>
 	</g>
