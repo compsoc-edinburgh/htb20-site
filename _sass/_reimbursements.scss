@@ -1,0 +1,40 @@
+@import 'util/media';
+
+.reimbursements {
+    @include content-page;
+}
+
+.reimbursements__header {
+    @include content-page__header;
+}
+
+.reimbursements__container {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+    @include media-desktop {
+        margin-left: 20vw;
+        margin-right: 20vw;
+    }
+}
+
+.reimbursements__table {
+
+	padding: 0 2em 0 2em ;
+	width: 100%;
+	
+	@include media-desktop {
+		width: 40vw;
+	}
+
+	> thead > tr > th {
+		text-align: left;
+	}
+
+}
