@@ -1,0 +1,57 @@
+<div class="live" data-parallax="scroll" data-speed="0.2" data-image-src="/static/bg.jpg">
+    <div class="live__topbar">
+        <a class="live__topbarback" href="/">
+            <i class="fas fa-home"></i>
+        </a>
+        <input type="radio" name="livenav" id="live" value="live" class="live__topbar__input" checked/>
+        <label for="live">Live</label>
+        <input type="radio" name="livenav" id="chal" value="chal" class="live__topbar__input"/>
+        <label for="chal">Challenges</label>
+        <!--input type="radio" name="livenav" id="info" value="info" class="live__topbar__input"/>
+        <label for="info">Scavenger Hunt</label-->
+        <input type="radio" name="livenav" id="cdwn" value="cdwn" class="live__topbar__input"/>
+        <label for="cdwn">Countdown</label>
+    </div>
+    <ul class="live__schedule" data-nav="live">
+        {% for event in site.data.schedule %}
+        <li class="live__scheduleitem" data-time="{{ event.timestamp }}" data-duration="{{ event.duration }}" data-title="{{ event.title }}"> 
+            <div class="live__scheduleitembody">
+                <div class="live__scheduleitem__title">
+                    <h2> {{ event.title }} </h2>
+                    <span class="live__scheduleitem__title--countdown">{{ event.timestamp }}</span>
+                </div>
+                <div class="live__eventdetails">
+                    <p>{{ event.content }}</p>
+                </div>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+    <div class="live__challenges live--hidden" data-nav="chal">
+        {% for event in site.data.challenges  %}
+        <a class="live__challenge" href="https://hacktheburghvi.slack.com/messages/{{ event.slackID }}" target="_blank">
+            <div class="live__challengebody">
+                <h3 class="live__challengetitle">{{ event.title }}</h3>
+                <p>{{ event.description }}</p>
+                <div class="live__challengechannel">On slack at #{{ event.slackName }}</div>
+            </div>
+            <div class="live__challengebutton">
+                <i class="fas fa-arrow-right"></i>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+    <!--div class="live__information live--hidden" data-nav="info">
+        <a href="https://docs.google.com/document/d/19h3dVB5o-Fm2oBzB3Wwdrtxg0UAdZtBG5bLF4ckdqgs/edit?usp=sharing" class="live__informationbody" target="_blank">
+            <i class="fas fa-download"></i>
+            <p> download info </p>
+        </a>
+</div> -->
+    <div class="live__countdown live--hidden" data-nav="cdwn">
+        <div class="live__countdownbody">
+            <h1 class="live__countdown-show">some amount of time</h1>
+            <p>remaining before the deadline</p>
+        </div>
+    </div>
+</div>
+
