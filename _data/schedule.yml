@@ -47,6 +47,11 @@
   timestamp: 2020-02-29T19:00
   icon: microphone
   content: "Served fresh in the Recharge area."
+  
+- title: Table tennis tournament
+  timestamp: 2020-02-29T20:00
+  icon: microphone
+  content: The _real_ test of your skills
 
 
 - title: Will Russell - Android App Development
