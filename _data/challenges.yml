@@ -1,90 +1,54 @@
-# - title: Hack the Burgh
-#   slackID: CFD6TL9QU
-#   slackName: _general
-#   description: We have prizes for the best three projects overall!
+- title: Hack the Burgh
+  slackID: CFD6TL9QU
+  slackName: general
+  description: We have prizes for the best three projects overall!
 
-# - title: BlackRock
-#   slackID: CGN4FTMKP
-#   slackName: blackrock
-#   description: Build the best financial hack!
+- title: AND Digital
+  slackID: CU5KAPKDX
+  slackName: and_digital
+  description: Hack Edinburgh Tourism Industry!
 
-# - title: BlackRock
-#   slackID: CGN4FTMKP
-#   slackName: blackrock
-#   description: '!Light by MLH! See the schedule for details.'
+- title: BlackRock
+  slackID: CUFP5MBD3
+  slackName: blackrock
+  description: Climate driven hack!
 
-# - title: BlackRock
-#   slackID: CGN4FTMKP
-#   slackName: blackrock
-#   description: 'Take a photo to win a prize! We have a polaroid camera floating around.'
+- title: BlackRock
+  slackID: CUFP5MBD3
+  slackName: blackrock
+  description: Polaroid photo challenge
 
-# - title: ARM
-#   slackID: CGM2AKW6L
-#   slackName: arm
-#   description: Make something bizarre, amusing, or useless using ARM tech. Runner-up prizes for the most bizarre, most amusing, or most useless.
+- title: Major League Hacking
+  slackID: CUBC0F0G3
+  slackName: mlh
+  description: Fishing for a job
 
-# # nexmo
-# - title: Nexmo
-#   slackID: CGM2ALVME
-#   slackName: nexmo
-#   description: Build an accessible voice application using the Nexmo Voice API. The prize is four Nanoleaf light panels!
+- title: Craneware
+  slackID: CUHJL0P71
+  slackName: craneware
+  description: Procedurally Generated Game
 
-# - title: Nexmo
-#   slackID: CGM2ALVME
-#   slackName: nexmo
-#   description: Win a Pixl.js by using the Nexmo API to text +447508741510! We've got ten of them, first come first serve.
+- title: Optiver
+  slackID: CUHUU2W5U
+  slackName: optiver
+  description: Design your own trading algorithm
 
-# - title: Squarepoint Capital
-#   slackID: CGN4GPD7X
-#   slackName: squarepoint
-#   description: Build a poker bot to play our own version of poker! Win an amazon voucher!
+- title: Skyscanner
+  slackID: CU48WGXQT
+  slackName: skyscanner
+  description: Create the most innovative solution to a real world problem that our travellers face, with a conscious focus on sustainability
 
-# - title: JP Morgan
-#   slackID: CGN4FUYLD
-#   slackName: jpmorgan
-#   description: Build a hack for empowering minority entrepreneurs!
+- title: Thought Machine
+  slackID: CUNQ7JEKF
+  slackName: thoughtmachine
+  description: Best use of Vault
 
-# - title: Craneware
-#   slackID: CGV58JUN9
-#   slackName: craneware
-#   description: Win a SNES by winning against us and entering the raffle!
+- title: Transloadit
+  slackID: CURJ31C5C
+  slackName: transloadit
+  description: Best use of Transloadit APIs
 
-# - title: Craneware
-#   slackID: CGV58JUN9
-#   slackName: craneware
-#   description: Make a creative and innovative festival to create the perfect Edinburgh Festival Experience!
-
-# - title: Connected Energy
-#   slackID: CGMLPT1PD
-#   slackName: connectedenergy
-#   description: Make something to help reduce your carbon footprint! Win a subscription to Wired magazine!
-
-# - title: Edjo
-#   slackID: CGNSBNQTZ
-#   slackName: edjo
-#   description: We're giving out prizes for code golf!
-
-# - title: Major League Hacking
-#   slackID: CH109FN12
-#   slackName: ask-mlh
-#   description: Best IoT hack using a Qualcomm device. Win a Dragonboard 410c!
-
-# - title: Major League Hacking
-#   slackID: CH109FN12
-#   slackName: ask-mlh
-#   description: Best use of Snap Kit. Win a Casio Calculator Watch!
-
-# - title: Major League Hacking
-#   slackID: CH109FN12
-#   slackName: ask-mlh
-#   description: Best domain registered with Domain.com. Win a Raspberry Pi Kit!
-
-# - title: Major League Hacking
-#   slackID: CH109FN12
-#   slackName: ask-mlh
-#   description: Best use of Google Cloud Platform. Win a Google Home Mini!
-
-# - title: Hack the Burgh
-#   slackID: CFD6TL9QU
-#   slackName: _general
-#   description: We have prizes for the best memes!
+- title: Barclays
+  slackID: CUF99GNRJ
+  slackName: barclays
+  description: Build a chatbot to better enhance a specific service in the banking industry
