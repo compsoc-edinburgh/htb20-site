@@ -6,108 +6,113 @@
 - title: Opening ceremony
   timestamp: 2020-02-29T11:00
   icon: microphone
-  content: "Meet us at 50 George Square Lecture Theathre — follow the volunteers. A word from organisers, some house rules, sponsor introductions and all hacktastic things."
+  content: "Meet us Gordon Aikman Lecture Theatre - follow the volunteers. A word from the organisers, some house rules, sponsor introductions and all hacktastic things."
 
 - title: Hacking Begins
   timestamp: 2020-02-29T12:00
   icon: code
   content: "This is it. You have 24 hours to save the world."
 
+- title: Lunch
+  timestamp: 2020-02-29T12:00
+  icon: code
+  content: "Served outside the Forum entrance or delivered to your desk by HackerEats."
+
 - title: Team Building
   timestamp: 2020-02-29T12:30
   icon: play
-  content: "Don't have a team? Not an issue. Come to G.03 for a little speed dating style teambuilding game. Doors are open till 14:30."
+  content: "Don't have a team? Not an issue. Come to Mini Forum 2 (4th floor) for a little speed dating style teambuilding game."
 
-- title: Blackrock - How to listen instead of just hear
+- title: Blackrock
   timestamp: 2020-02-29T13:00
   icon: microphone
-  content: "BlackRock will show you how to develop and present your idea in a way that can win the judges' hearts. Room 4.33 — volunteers will show you to it."
+  content: "How to listen instead of just hear - Mini Forum 2 (4th floor)"
 
-- title: Skyscanner  - Microservices at Skyscanner
+- title: Skyscanner
   timestamp: 2020-02-29T14:00
   icon: microphone
-  content: "Aaron from MLH will show you how to use the world's most popular collaboration tool. Room G.03."
+  content: "Microservices at Skyscanner - Mini Forum 2 (4th floor)"
 
-- title: Barclays 
+- title: Barclays
   timestamp: 2020-02-29T15:00
   icon: flag
-  content: "Not a local Edinburgher? This is your chance to learn more about the city. Meet Kyle at the Helpdesk."
-  
-- title: Edinburgh City Tour 
+  content: "Mini Forum 2 (4th floor)"
+
+- title: Edinburgh City Tour
   timestamp: 2020-02-29T15:00
   icon: flag
-  content: "Not a local Edinburgher? This is your chance to learn more about the city. Meet Kyle at the Helpdesk."
+  content: "Not a local Edinburgher? This is your chance to learn more about the city. Meet us at the Helpdesk."
 
 - title: Transloadit Workshop
   timestamp: 2020-02-29T16:00
   icon: microphone
-  content: "Learn how to use BigchainDB from Haryjot from Edjo. Room 4.33"
-  
+  content: "Mini Forum 2 (4th floor)"
+
 - title: Will Russell - Android App Development
   timestamp: 2020-02-29T17:00
   icon: microphone
-  content: "Natural Language Processing at a hackathon?! Absolutely. Daniel even got a PhD for it. Room G.03."
-  
+  content: "Mini Forum 2 (4th floor)"
+
 - title: Dinner
   timestamp: 2020-02-29T19:00
   icon: microphone
-  content: "Natural Language Processing at a hackathon?! Absolutely. Daniel even got a PhD for it. Room G.03."
-  
+  content: "Served fresh in the Recharge area."
+
 - title: Blackrock x MLH game
   timestamp: 2020-02-29T21:00
   icon: microphone
-  content: "Sadiq Baidani swears that VSCode saved his life. Learn all the tips and tricks that this text editor offers. Room 4.33"
-  
+  content: "Fishing for a job"
+
 - title: Slideshow Karaoke
   timestamp: 2020-02-29T21:30
   icon: microphone
-  content: "Adam from Craneware will share the ins and outs of TDD. Room G.03"
+  content: "Not to be missed"
 
 - title: Dinner
   timestamp: 2020-02-29T18:30
   icon: cutlery
   content: "Served in the Recharge area."
-  
+
 - title: Sleep
   timestamp: 2020-02-29T23:00
-  content: If you would like to catch some Zs, ask our crew to guide you to rooms on levels 2 and 4 where you will find cozy couches to nap on. Sleeping areas close at 9.
+  content: If you would like to catch some Zs, ask our crew to guide you to the sleeping areas
 
 - title: Midnight Pizza
   timestamp: 2020-03-01T00:00
   icon: cutlery
-  content: Our friends at Cultivate HQ are sending us triangular greetings. Served in Recharge area.
+  content: Not to be missed
 
 - title: "Arthur's seat/Salisbury Crags climb"
   timestamp: 2020-03-01T06:00
   icon: cutlery
-  content: Our friends at Cultivate HQ are sending us triangular greetings. Served in Recharge area.
-  
+  content: "Nothing is more extraodinary than seeing the sun rise from Arthur's Seat. Join us at the Helpdesk for a morning refresher to the tallest mountain in the area."
+
 - title: Breakfast
   timestamp: 2020-03-01T08:00
   icon: cutlery
-  content: Our friends at Cultivate HQ are sending us triangular greetings. Served in Recharge area.
+  content: "Catered from a van outside the building. If you have dietary requirements, please speak to crew member."
 
 - title: Project Submission
   timestamp: 2020-03-01T11:00
   icon: cutlery
-  content: Our friends at Cultivate HQ are sending us triangular greetings. Served in Recharge area.
-  
+  content: "Submit your hack at hacktheburgh.com/submit. The submission deadline is 12pm."
+
 - title: Hacking Ends
   timestamp: 2020-03-01T12:00
   icon: cutlery
-  content: Our friends at Cultivate HQ are sending us triangular greetings. Served in Recharge area.
+  content: Done or not - this is it!
 
 - title: Lunch
   timestamp: 2020-03-01T12:00
   icon: cutlery
-  content: Our friends at Cultivate HQ are sending us triangular greetings. Served in Recharge area.
+  content: Served outside the forum
 
 - title: Judging
   timestamp: 2020-03-01T13:30
   icon: cutlery
-  content: Our friends at Cultivate HQ are sending us triangular greetings. Served in Recharge area.
+  content: "Judging"
 
 - title: Closing Ceremony
   timestamp: 2020-03-01T13:30
   icon: cutlery
-  content: Our friends at Cultivate HQ are sending us triangular greetings. Served in Recharge area.
+  content: "Make sure to take all of your belongings with you. Hosted in 50 George Square Lecure Theatre."
