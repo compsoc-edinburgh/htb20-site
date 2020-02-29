@@ -43,15 +43,16 @@
   icon: microphone
   content: "Mini Forum 2 (4th floor)"
 
-- title: Will Russell - Android App Development
-  timestamp: 2020-02-29T20:00
-  icon: microphone
-  content: "Mini Forum 2 (4th floor)"
-
 - title: Dinner
   timestamp: 2020-02-29T19:00
   icon: microphone
   content: "Served fresh in the Recharge area."
+
+
+- title: Will Russell - Android App Development
+  timestamp: 2020-02-29T20:00
+  icon: microphone
+  content: "Mini Forum 2 (4th floor)"
 
 - title: Blackrock x MLH game
   timestamp: 2020-02-29T21:00
